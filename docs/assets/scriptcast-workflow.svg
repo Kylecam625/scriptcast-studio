@@ -1,0 +1,98 @@
+<svg width="1160" height="360" viewBox="0 0 1160 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">ScriptCast Studio animated workflow</title>
+  <desc id="desc">An animated workflow showing an idea becoming a parsed script, voice casting, generated audio chunks, and a final export.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1160" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.48" stop-color="#10213a"/>
+      <stop offset="1" stop-color="#101517"/>
+    </linearGradient>
+    <linearGradient id="line" x1="110" y1="180" x2="1048" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7dd3fc"/>
+      <stop offset="0.52" stop-color="#a7f3d0"/>
+      <stop offset="1" stop-color="#fbbf24"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.42 0 0 0 0 0.82 0 0 0 0 1 0 0 0 0.55 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .card { fill: rgba(255,255,255,0.08); stroke: rgba(255,255,255,0.2); stroke-width: 1.2; }
+      .label { fill: #e5eefb; font: 700 20px ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .small { fill: #a8b6c8; font: 500 13px ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .icon { fill: none; stroke: #d9f99d; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .pulse { transform-origin: center; animation: pulse 2.8s ease-in-out infinite; }
+      .pulse:nth-of-type(2) { animation-delay: .35s; }
+      .pulse:nth-of-type(3) { animation-delay: .7s; }
+      .pulse:nth-of-type(4) { animation-delay: 1.05s; }
+      .pulse:nth-of-type(5) { animation-delay: 1.4s; }
+      @keyframes pulse {
+        0%, 100% { opacity: .78; transform: scale(1); }
+        45% { opacity: 1; transform: scale(1.025); }
+      }
+      .wave { animation: wave 2.6s ease-in-out infinite; transform-origin: center; }
+      .wave:nth-child(2) { animation-delay: .2s; }
+      .wave:nth-child(3) { animation-delay: .4s; }
+      @keyframes wave {
+        0%, 100% { opacity: .35; transform: scaleY(.72); }
+        50% { opacity: 1; transform: scaleY(1.16); }
+      }
+    </style>
+  </defs>
+
+  <rect width="1160" height="360" rx="28" fill="url(#bg)"/>
+  <path d="M112 180H1048" stroke="url(#line)" stroke-width="5" stroke-linecap="round" opacity="0.52"/>
+
+  <circle r="9" fill="#fef3c7" filter="url(#glow)">
+    <animateMotion dur="7.2s" repeatCount="indefinite" path="M112 180H1048"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="7.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="5" fill="#7dd3fc">
+    <animateMotion dur="7.2s" begin="1.1s" repeatCount="indefinite" path="M112 180H1048"/>
+    <animate attributeName="opacity" values="0;0.9;0.9;0" dur="7.2s" begin="1.1s" repeatCount="indefinite"/>
+  </circle>
+
+  <g class="pulse">
+    <rect class="card" x="42" y="96" width="180" height="168" rx="18"/>
+    <path class="icon" d="M95 160h74M95 184h48M95 208h62M91 132h82v104H91z"/>
+    <text class="label" x="132" y="285" text-anchor="middle">Idea</text>
+    <text class="small" x="132" y="307" text-anchor="middle">Prompt or chat</text>
+  </g>
+
+  <g class="pulse">
+    <rect class="card" x="270" y="96" width="180" height="168" rx="18"/>
+    <path class="icon" d="M318 137h84M318 164h84M318 191h58M307 225c21-18 83-18 104 0"/>
+    <text class="label" x="360" y="285" text-anchor="middle">Script</text>
+    <text class="small" x="360" y="307" text-anchor="middle">Parsed turns</text>
+  </g>
+
+  <g class="pulse">
+    <rect class="card" x="498" y="96" width="180" height="168" rx="18"/>
+    <circle class="icon" cx="558" cy="164" r="28"/>
+    <path class="icon" d="M606 142v76M606 142c25 10 25 66 0 76M538 217c32-22 70-22 102 0"/>
+    <text class="label" x="588" y="285" text-anchor="middle">Cast</text>
+    <text class="small" x="588" y="307" text-anchor="middle">Voices + tags</text>
+  </g>
+
+  <g class="pulse">
+    <rect class="card" x="726" y="96" width="180" height="168" rx="18"/>
+    <rect class="wave" x="780" y="139" width="10" height="82" rx="5" fill="#93c5fd"/>
+    <rect class="wave" x="805" y="126" width="10" height="108" rx="5" fill="#86efac"/>
+    <rect class="wave" x="830" y="149" width="10" height="62" rx="5" fill="#fde68a"/>
+    <rect class="wave" x="855" y="117" width="10" height="126" rx="5" fill="#fca5a5"/>
+    <text class="label" x="816" y="285" text-anchor="middle">Audio</text>
+    <text class="small" x="816" y="307" text-anchor="middle">Dialogue chunks</text>
+  </g>
+
+  <g class="pulse">
+    <rect class="card" x="954" y="96" width="180" height="168" rx="18"/>
+    <path class="icon" d="M1002 155h84M1002 190h84M1044 128v92M1014 220h60"/>
+    <path class="icon" d="M1085 132l28 28-28 28"/>
+    <text class="label" x="1044" y="285" text-anchor="middle">Export</text>
+    <text class="small" x="1044" y="307" text-anchor="middle">MP3 + captions</text>
+  </g>
+</svg>

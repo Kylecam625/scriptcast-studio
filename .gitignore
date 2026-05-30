@@ -1,0 +1,11 @@
+node_modules
+.next
+.scriptcast
+.playwright-mcp
+prompt-lab-runs
+coverage
+*.log
+.env
+.env.local
+.env.*.local
+.DS_Store
